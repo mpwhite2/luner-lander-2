@@ -1,0 +1,39 @@
+{
+    "name": "luner lander 2",
+    "version": "3.0.0",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "pxt-arcade-image-transform": "github:robo-technical-group/pxt-arcade-image-transform#v1.0.5",
+        "animation": "*",
+        "pxt-arcade-info-screens": "github:robo-technical-group/pxt-arcade-info-screens#v1.0.13",
+        "sprite-scaling": "*",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.0.1",
+        "color-coded-tilemap": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "images.g.jres",
+        "images.g.ts",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "main.py"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "branch": "v0.16.18",
+        "tag": "v0.16.18",
+        "commits": "https://github.com/microsoft/pxt-arcade/commits/ee5a57d6064675a1eb1bd0f19db148f9bb00d42b",
+        "target": "1.11.37",
+        "pxt": "5.32.3",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj"
+}
