@@ -7,14 +7,14 @@ function ChangeImage () {
     transformSprites.rotateSprite(Lander, transformSprites.getRotation(Lander))
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Moon, function (sprite, otherSprite) {
-    if(!(Lander.overlapsWith(Sites2))){
+    if (!(Lander.overlapsWith(Sites2))) {
         game.splash("THAT'S NOT A LANDING SITE!")
-    }
-    else if (sprite.vy > 10 ) {
+    } else if (sprite.vy > 10) {
         game.splash("YOU LANDED TOO HARD!")
-    }
-     else {
-        game.over(false)
+    } else if (transformSprites.getRotation(Lander) < 350 && transformSprites.getRotation(Lander) > 10) {
+        game.splash("YOU TIPED!")
+    } else {
+        game.splash("YOU LANDED ON THE MOON!")
     }
 })
 function thrustLander () {
@@ -37,7 +37,7 @@ let Sites2: Sprite = null
 let Lander: Sprite = null
 let THRUSTER_VELOCITY = 0
 let oldRotation = 0
-THRUSTER_VELOCITY = 20
+THRUSTER_VELOCITY = 30
 Lander = sprites.create(assets.image`myImage`, SpriteKind.Player)
 Lander.setVelocity(13, 0)
 scene.cameraFollowSprite(Lander)
@@ -68,7 +68,7 @@ forever(function () {
     }
 })
 game.onUpdateInterval(100, function () {
-    Lander.vy += 1
+    Lander.vy += 1.25
 })
 game.onUpdateInterval(100, function () {
     sprites.destroyAllSpritesOfKind(SpriteKind.effect)
